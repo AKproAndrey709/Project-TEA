@@ -53,3 +53,54 @@ body {
 	align-items: center;
 	gap: 30px;
 }
+
+.top {
+	background-image: url(../images/top_main.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: cover;
+}
+
+.top_inner {
+	min-height: 500px;
+	font-family: 'Cormorant', serif;
+	color: #fff;
+	font-weight: 400;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+}
+
+.top_title {
+	font-size: 60px;
+	margin-bottom: 20px;
+	max-width: 780px;
+	line-height: 1;
+	font-weight: 400;
+}
+
+.top_text {
+	font-size: 24px;
+	margin-bottom: 48px;
+	max-width: 560px;
+	line-height: normal;
+}
+
+.blockquote_text {
+	text-align: center;
+	font-family: 'Cormorant', serif;
+	font-size: 40px;
+	font-style: italic;
+	line-height: normal;
+	max-width: 704px;
+	margin: 150px auto;
+}
+
+@media (max-width:d 1000px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 360px) {}
