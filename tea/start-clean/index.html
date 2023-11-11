@@ -20,7 +20,6 @@
 	</head>
 	<body>
 		<!-- HEADER START -->
-
 		<header class="header">
 			<div class="container">
 				<div class="row">
@@ -300,7 +299,47 @@
 							Voluptatibus, aut.
 						</div>
 						<div class="text-center">
-							<input type="submit" value="Заказать звонок" />
+							<button class="popup-open">Заказать обратный звонок</button>
+						</div>
+						<div class="popup-overlay"></div>
+						<div class="popup-modal">
+							<!-- <button class="popup-close">&times;</button> -->
+							<form action="" method="POST">
+								<div class="col-12 input">
+									<div class="form-group">
+										<p>Ваше Имя</p>
+										<input
+											type="text"
+											class="form-control"
+											placeholder="Ваше Имя"
+											value
+											size="40"
+											required
+										/>
+									</div>
+								</div>
+								<div class="col-12 input">
+									<div class="form-group">
+										<p>Телефон</p>
+										<input
+											type="tel"
+											class="form-control"
+											placeholder="Телефон"
+											required
+										/>
+									</div>
+								</div>
+							</form>
+							<div>
+								<label>
+									<input type="checkbox" id="box" />
+									<span>
+										Нажимая на кнопку "Заказать", вы даете согласие на
+										обработку персональных данных.
+									</span>
+								</label>
+								<button class="popup-close">Заказать</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -342,11 +381,11 @@
 
 								<div class="col-12 col-md-6 col-xl-3 input">
 									<div class="form-group">
-										<p>Ваше Фамилия</p>
+										<p>Ваша Фамилия</p>
 										<input
 											type="text"
 											class="form-control"
-											placeholder="Ваше Фамилия"
+											placeholder="Ваша Фамилия"
 											required
 										/>
 									</div>
@@ -476,7 +515,6 @@
 		<!-- FOOTER START -->
 		<footer></footer>
 		<!-- FOOTER END -->
-
 		<script
 			src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
 			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -487,6 +525,7 @@
 			integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
 			crossorigin="anonymous"
 		></script>
-		<!-- <script src="js/main.js"></script> -->
+		<script src="jQuery/jquery-3.7.1.min.js"></script>
+		<script src="jQuery/jquery.js"></script>
 	</body>
 </html>
