@@ -35,21 +35,21 @@
 								<!-- ul.menu_list>li.menu_item*5>a.menu_link[href=#] -->
 								<ul class="menu">
 									<li class="menu__item">
-										<a href="#">ПРОДУКЦИЯ</a>
+										<a href="#product">Продукция</a>
 									</li>
 									<li class="menu__item">
-										<a href="#" class="menu__link">О компании</a>
-									</li>
-									<li class="menu__item">
-										<a href="#" class="menu__link"
+										<a href="#info-product" class="menu__link"
 											>Интересные факты о продукции</a
 										>
 									</li>
 									<li class="menu__item">
-										<a href="#" class="menu__link">Обратная связь</a>
+										<a href="#info-company" class="menu__link">О компании</a>
 									</li>
 									<li class="menu__item">
-										<a href="#contact" class="menu__link">Contact</a>
+										<a href="#form-obr" class="menu__link">Обратная связь</a>
+									</li>
+									<li class="menu__item">
+										<a href="#contact" class="menu__link">Наши Контакты</a>
 									</li>
 								</ul>
 							</nav>
@@ -107,58 +107,187 @@
 				</p>
 			</blockquote>
 
-			<div class="row">
-				<div class="container" id="contact">
-					<div class="row">
-						<div class="col-12 head-block-name" style="text-align: center; border: solid 1px">
-							Contact
-						</div>
+			<!-- ПРОДУКЦИЯ -->
+			<div class="container" id="product">
+				<div class="row">
+					<div class="col-12 head-block-name">Продукция</div>
+				</div>
+			</div>
+
+			<!-- ФАКТЫ О ПРОДУКЦИИ -->
+			<div class="container" id="info-product">
+				<div class="row">
+					<div class="col-12 head-block-name">Интересные факты о продукции</div>
+				</div>
+			</div>
+
+			<!-- О КОМПАНИИ -->
+			<div class="container" id="info-company">
+				<div class="row">
+					<div class="col-12">
+						<div class="head-block-name">О Компании</div>
 					</div>
-					<div class="row">
-						<div class="col-12 col-md-5 col-lg-4 col-xl-3 contact-block">
-							<div class="bg-block" style="border: solid 1px">
-								<div class="item-cont">
-									<div class="icon-cont"></div>
-									<div class="name-cont">ADRESS</div>
-									<div class="text-cont">
-										Г. Москва, Нижний Сусальный <br />
-										переулок, д. 5, стр.19, эт. А1,<br />
-										пом. XI, ком. 14, пом. 22
+				</div>
+			</div>
+
+			<!-- FORM_OBR -->
+			<div class="container" id="form-obr">
+				<div class="row">
+					<div class="col-12 head-block-name">Форма обратной связи</div>
+					<div class="col-12 form-contact">
+						<form action="" method="POST">
+							<p>
+								После отправления данных, мы вышлем на Ваш e-mail файл с ценами
+							</p>
+
+							<div class="row" style="display: flex; flex-wrap: wrap">
+								<div class="col-12 col-md-6 col-xl-3 input">
+									<div class="form-group">
+										<p>Ваше Имя</p>
+										<input
+											type="text"
+											class="form-control"
+											placeholder="Ваше Имя"
+											value
+											size="40"
+											required
+										/>
 									</div>
 								</div>
-								<div class="item-cont">
-									<div class="icon-cont"></div>
-									<div class="name-cont">PHONE</div>
-									<div class="text-cont">
-										<a href="tel:+74952605289">+7 (495) 260-52-89</a>
+
+								<div class="col-12 col-md-6 col-xl-3 input">
+									<div class="form-group">
+										<p>Ваше Фамилия</p>
+										<input
+											type="text"
+											class="form-control"
+											placeholder="Ваше Фамилия"
+											required
+										/>
 									</div>
 								</div>
-								<div class="item-cont">
-									<div class="icon-cont"></div>
-									<div class="name-cont">EMAIL</div>
-									<div class="text-cont">
-										<a href="mailto:hotline@eduprof.ru">hotline@eduprof.ru</a>
+
+								<div class="col-12 col-md-6 col-xl-3 input">
+									<div class="form-group">
+										<p>Телефон</p>
+										<input
+											type="tel"
+											class="form-control"
+											placeholder="Телефон"
+											required
+										/>
 									</div>
 								</div>
-								<div class="item-cont">
-									<div class="icon-cont"></div>
-									<div class="name-cont">TIME WORK</div>
-									<div class="text-cont">
-										Пн - Пт: с 09.00 до 18.00 <br />
-										Без перерывов
+
+								<div class="col-12 col-md-6 col-xl-3 input">
+									<div class="form-group">
+										<p>E-mail</p>
+										<input
+											type="email"
+											class="form-control"
+											placeholder="Email"
+											required
+										/>
 									</div>
 								</div>
 							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<div class="form-group">
+										<p>Сообщение</p>
+										<textarea
+											class="form-control"
+											rows="4"
+											placeholder="Сообщение"
+											required
+										></textarea>
+									</div>
+									<div>
+										<input type="checkbox" id="box" />
+										<label for="box">
+											<p>
+												Нажимая на кнопку "Отправить, вы даете согласие на
+												обработку персональных данных."
+											</p>
+										</label>
+
+										<!-- <input type="checkbox" />
+										<p>
+											Нажимая на кнопку "Отправить, вы даете согласие на
+											обработку персональных данных."
+										</p> -->
+									</div>
+								</div>
+							</div>
+
+							<div>
+								<input
+									type="submit"
+									value="Обратный звонок"
+									class="btn btn-warning form-control"
+								/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- CONTACT -->
+			<!-- <div class="row m-0"> -->
+			<div class="container" id="contact">
+				<div class="row">
+					<div
+						class="col-12 head-block-name"
+						style="text-align: center; border: solid 1px"
+					>
+						Contact
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-md-5 col-lg-4 col-xl-3 contact-block">
+						<div class="bg-block" style="border: solid 1px">
+							<div class="item-cont">
+								<div class="icon-cont"></div>
+								<div class="name-cont">ADRESS</div>
+								<div class="text-cont">
+									Г. Москва, Нижний Сусальный <br />
+									переулок, д. 5, стр.19, эт. А1,<br />
+									пом. XI, ком. 14, пом. 22
+								</div>
+							</div>
+							<div class="item-cont">
+								<div class="icon-cont"></div>
+								<div class="name-cont">PHONE</div>
+								<div class="text-cont">
+									<a href="tel:+74952605289">+7 (495) 260-52-89</a>
+								</div>
+							</div>
+							<div class="item-cont">
+								<div class="icon-cont"></div>
+								<div class="name-cont">EMAIL</div>
+								<div class="text-cont">
+									<a href="mailto:hotline@eduprof.ru">hotline@eduprof.ru</a>
+								</div>
+							</div>
+							<div class="item-cont">
+								<div class="icon-cont"></div>
+								<div class="name-cont">TIME WORK</div>
+								<div class="text-cont">
+									Пн - Пт: с 09.00 до 18.00 <br />
+									Без перерывов
+								</div>
+							</div>
 						</div>
-						<div class="col-12 col-md-7 col-lg-8 col-xl-9 map-block">
-							<!-- <script
+					</div>
+					<div class="col-12 col-md-7 col-lg-8 col-xl-9 map-block">
+						<!-- <script
 								type="text/javascript"
 								charset="utf-8"
 								async
 								src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A491281b3df14e89b16d984c139f7c8ccb566d14a04b86594eff103652ae4bc42&amp;width=652&amp;height=324&amp;lang=ru_RU&amp;scroll=true"
 							></script> -->
 
-							<!-- <iframe
+						<!-- <iframe
 								src="https://yandex.ru/map-widget/v1/?um=constructor%3A491281b3df14e89b16d984c139f7c8ccb566d14a04b86594eff103652ae4bc42&amp;source=constructor"
 								width="100%"
 								height="100%"
@@ -166,18 +295,18 @@
 								frameborder="0"
 							></iframe> -->
 
-							<iframe
-								src="https://yandex.ru/map-widget/v1/?um=constructor%3A491281b3df14e89b16d984c139f7c8ccb566d14a04b86594eff103652ae4bc42&amp;source=constructor"
-								width="100%"
-								height="100%"
-								frameborder="0"
-							></iframe>
-						</div>
+						<iframe
+							src="https://yandex.ru/map-widget/v1/?um=constructor%3A491281b3df14e89b16d984c139f7c8ccb566d14a04b86594eff103652ae4bc42&amp;source=constructor"
+							width="100%"
+							height="100%"
+							frameborder="0"
+						></iframe>
 					</div>
-					<div class="row"></div>
 				</div>
+				<div class="row"></div>
 			</div>
 		</div>
+		<!-- </div> -->
 		<!-- MAIN END -->
 
 		<!-- FOOTER START -->
