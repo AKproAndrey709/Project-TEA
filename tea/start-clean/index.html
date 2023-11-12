@@ -25,7 +25,7 @@
 				<div class="row">
 					<nav class="col-12 navbar navbar-expand-lg navbar-light p-0 m-0">
 						<div class="col-lg-1 logo">
-							<a class="navbar-brand logo" href="#product">
+							<a class="navbar-brand logo" href="index.html">
 								<img src="images/logo.svg" alt="TealuxE" />
 							</a>
 						</div>
@@ -158,24 +158,38 @@
 			<!-- ПРОДУКЦИЯ -->
 			<div class="container" id="product">
 				<div class="row">
-					<div
-						class="col-12 head-block-name"
-						style="text-align: center; border: solid 1px"
-					>
-						Продукция
+					<div class="col-12">
+						<div
+							class="head-block-name"
+							style="text-align: center; border: solid 1px"
+						>
+							Продукция
+						</div>
 					</div>
 					<div class="col-12">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-						cumque id voluptate at explicabo quas, dolore suscipit consequatur
-						facere nostrum, iusto saepe ratione alias laboriosam, incidunt
-						molestiae doloremque sint perferendis!
+						<p class="product">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Recusandae cumque id voluptate at explicabo quas, dolore suscipit
+							consequatur facere nostrum, iusto saepe ratione alias laboriosam,
+							incidunt molestiae doloremque sint perferendis!
+						</p>
 					</div>
 					<div class="col-12">
-						<a href="#"><img src="./images/black_tea.jpg" alt="" /></a>
-						<a href="#"><img src="./images/green_tea.jpg" alt="" /></a>
-						<a href="#"><img src="./images/white_tea.jpg" alt="" /></a>
-						<a href="#"><img src="./images/oolong_tea.jpg" alt="" /></a>
-						<a href="#"><img src="./images/puerh_tea.jpg" alt="" /></a>
+						<a href="#"
+							><img src="./images/black_tea-benzin-preview.png" alt=""
+						/></a>
+						<a href="#"
+							><img src="./images/green_tea-benzin-preview.png" alt=""
+						/></a>
+						<a href="#"
+							><img src="./images/white_tea-benzin-preview.png" alt=""
+						/></a>
+						<a href="#"
+							><img src="./images/oolong_tea-benzin-preview.png" alt=""
+						/></a>
+						<a href="#"
+							><img src="./images/puerh_tea-transformed.png" alt=""
+						/></a>
 					</div>
 				</div>
 			</div>
@@ -183,11 +197,13 @@
 			<!-- ФАКТЫ О ПРОДУКЦИИ -->
 			<div class="container" id="info-product">
 				<div class="row">
-					<div
-						class="col-12 head-block-name"
-						style="text-align: center; border: solid 1px"
-					>
-						Интересные факты о продукции
+					<div class="col-12">
+						<div
+							class="head-block-name"
+							style="text-align: center; border: solid 1px"
+						>
+							Интересные факты о продукции
+						</div>
 					</div>
 				</div>
 				<div class="row block-info-product">
@@ -304,7 +320,7 @@
 						<div class="popup-overlay"></div>
 						<div class="popup-modal">
 							<!-- <button class="popup-close">&times;</button> -->
-							<form action="" method="POST">
+							<form>
 								<div class="col-12 input">
 									<div class="form-group">
 										<p>Ваше Имя</p>
@@ -312,34 +328,47 @@
 											type="text"
 											class="form-control"
 											placeholder="Ваше Имя"
-											value
+											onfocus="this.placeholder=''"
+											onblur="this.placeholder='Ваше Имя'"
 											size="40"
-											required
+											minlength="3"
+											autocomplete="name"
+											name="name"
 										/>
 									</div>
 								</div>
 								<div class="col-12 input">
 									<div class="form-group">
-										<p>Телефон</p>
+										<p>Ваш Телефон</p>
 										<input
 											type="tel"
 											class="form-control"
-											placeholder="Телефон"
-											required
+											placeholder="Ваш Телефон"
+											onfocus="this.placeholder=''"
+											onblur="this.placeholder='Ваш Телефон'"
+											autocomplete="tel"
+											name="phone"
 										/>
 									</div>
 								</div>
+								<div>
+									<label>
+										<input type="checkbox" id="checkbox-call" />
+										<span>
+											Нажимая на кнопку "Заказать", вы даете согласие на
+											обработку персональных данных.
+										</span>
+									</label>
+									<div>
+										<!-- <input
+											type="submit"
+											value="Заказать"
+											class="btn btn-warning popup-close"
+										/> -->
+										<button class="popup-close">Заказать</button>
+									</div>
+								</div>
 							</form>
-							<div>
-								<label>
-									<input type="checkbox" id="box" />
-									<span>
-										Нажимая на кнопку "Заказать", вы даете согласие на
-										обработку персональных данных.
-									</span>
-								</label>
-								<button class="popup-close">Заказать</button>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -348,20 +377,22 @@
 			<!-- FORM_OBR -->
 			<div class="container" id="form-obr">
 				<div class="row">
-					<div
-						class="col-12 head-block-name"
-						style="text-align: center; border: solid 1px"
-					>
-						Форма обратной связи
+					<div class="col-12">
+						<div
+							class="head-block-name"
+							style="text-align: center; border: solid 1px"
+						>
+							Форма обратной связи
+						</div>
 					</div>
 					<div class="col-12 form-contact">
 						<form
-							action=""
-							method="POST"
+							id="form-send"
+							onsubmit="sendForm(this); return false;"
 							style="text-align: center; border: solid 1px"
 						>
 							<p>
-								После отправления данных, мы вышлем на Ваш e-mail файл с ценами
+								После отправления данных, мы вышлем на Ваш E-Mail файл с ценами.
 							</p>
 
 							<div class="row" style="display: flex; flex-wrap: wrap">
@@ -372,9 +403,13 @@
 											type="text"
 											class="form-control"
 											placeholder="Ваше Имя"
-											value
+											onfocus="this.placeholder=''"
+											onblur="this.placeholder='Ваше Имя'"
 											size="40"
 											required
+											minlength="3"
+											autocomplete="name"
+											name="name"
 										/>
 									</div>
 								</div>
@@ -386,31 +421,43 @@
 											type="text"
 											class="form-control"
 											placeholder="Ваша Фамилия"
+											onfocus="this.placeholder=''"
+											onblur="this.placeholder='Ваша Фамилия'"
 											required
+											autocomplete="given-name"
+											name="lastname"
 										/>
 									</div>
 								</div>
 
 								<div class="col-12 col-md-6 col-xl-3 input">
 									<div class="form-group">
-										<p>Телефон</p>
+										<p>Ваш Телефон</p>
 										<input
 											type="tel"
 											class="form-control"
-											placeholder="Телефон"
+											placeholder="Ваш Телефон"
+											onfocus="this.placeholder=''"
+											onblur="this.placeholder='Ваш Телефон'"
 											required
+											autocomplete="tel"
+											name="phone"
 										/>
 									</div>
 								</div>
 
 								<div class="col-12 col-md-6 col-xl-3 input">
 									<div class="form-group">
-										<p>E-mail</p>
+										<p>E-Mail</p>
 										<input
 											type="email"
 											class="form-control"
-											placeholder="Email"
+											placeholder="E-Mail"
+											onfocus="this.placeholder=''"
+											onblur="this.placeholder='E-Mail'"
 											required
+											autocomplete="email"
+											name="email"
 										/>
 									</div>
 								</div>
@@ -424,15 +471,21 @@
 											class="form-control"
 											rows="4"
 											placeholder="Сообщение"
+											onfocus="this.placeholder=''"
+											onblur="this.placeholder='Сообщение'"
 											required
+											name="message"
 										></textarea>
 									</div>
+
+									<p id="info" style="color: red"></p>
+
 									<div>
 										<label>
-											<input type="checkbox" id="box" />
+											<input type="checkbox" id="checkbox" required />
 											<span>
-												Нажимая на кнопку "Отправить, вы даете согласие на
-												обработку персональных данных."
+												Нажимая на кнопку "Обратный звонок", вы даете согласие
+												на обработку персональных данных.
 											</span>
 										</label>
 									</div>
@@ -443,7 +496,7 @@
 								<input
 									type="submit"
 									value="Обратный звонок"
-									class="btn btn-warning form-control"
+									class="btn btn-warning"
 								/>
 							</div>
 						</form>
@@ -455,11 +508,13 @@
 			<!-- <div class="row m-0"> -->
 			<div class="container" id="contact">
 				<div class="row">
-					<div
-						class="col-12 head-block-name"
-						style="text-align: center; border: solid 1px"
-					>
-						Contact
+					<div class="col-12">
+						<div
+							class="head-block-name"
+							style="text-align: center; border: solid 1px"
+						>
+							Наши Контакты
+						</div>
 					</div>
 				</div>
 				<div class="row">
@@ -509,12 +564,34 @@
 				</div>
 			</div>
 		</div>
-		<!-- </div> -->
 		<!-- MAIN END -->
 
 		<!-- FOOTER START -->
 		<footer></footer>
 		<!-- FOOTER END -->
+
+		<script>
+			async function sendForm(form) {
+				let response = await fetch("./php/form_send.php", {
+					method: "POST",
+					body: new FormData(form),
+				});
+				let result = await response.text();
+				if (result == "Ok!") {
+					alert("Отправка данных успешна!");
+				} else if (result == "Exist!!!") {
+					info.innerText = "Пользователь уже существует!";
+				}
+			}
+			const formsend = document.getElementById("form-send");
+			formsend.addEventListener("submit", (e) => {
+				// действия с данными
+				e.preventDefault();
+				e.target.reset(); // очищаем форму
+			});
+		</script>
+
+		<!-- <script src="js/main.js"></script> -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
 			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

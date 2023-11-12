@@ -7,7 +7,7 @@ body {
 	font-size: 16px;
 	font-weight: 300;
 	background-color: gray;
-	background: url(../images/main.jpg);
+	background: url(../images/tea_field.jpg);
 	background-attachment: fixed;
 	background-size: cover;
 	min-height: 100%;
@@ -58,7 +58,7 @@ li,
 } */
 
 .top {
-	background-image: url(../images/top_main.jpg);
+	background-image: url(../images/tea_top.jpg);
 	background-repeat: no-repeat;
 	background-position: bottom center;
 	background-size: cover;
@@ -146,4 +146,13 @@ li,
 	border-radius: 4px;
 	text-align: center;
 	z-index: 222;
+}
+
+#form-send,
+.head-block-name,
+.block-info-product,
+#info-company,
+.bg-block,
+.product {
+	background-color: rgb(0, 0, 0, 0.5);
 }
