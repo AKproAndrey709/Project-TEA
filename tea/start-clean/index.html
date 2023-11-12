@@ -78,7 +78,7 @@
 			<div class="top">
 				<div class="container">
 					<div class="top_inner">
-						<h1 class="top_title">"Высказывание"</h1>
+						<h1 class="top_title">"тук тук тук тук тук"</h1>
 						<p class="top_text">
 							"Ещё какой-то текст <br />
 							... тут продолжение"
@@ -107,7 +107,7 @@
 							Описание продукции с изображением и ссылки на товар.
 						</p>
 					</div>
-					<div class="col-12">
+					<div class="col-12" style="text-align: center">
 						<a href="#"
 							><img src="./images/black_tea-benzin-preview.png" alt=""
 						/></a>
@@ -133,7 +133,7 @@
 					<div class="col-12">
 						<div
 							class="head-block-name"
-							style="text-align: center; border: solid 1px"
+							style="text-align: center; border: solid 1px; text-shadow: 00"
 						>
 							Интересные факты о продукции
 						</div>
@@ -308,14 +308,14 @@
 						<form
 							id="form-send"
 							onsubmit="sendForm(this); return false;"
-							style="text-align: center; border: solid 1px"
+							style="text-align: center;"
 						>
-							<p>
+							<p class="text-form">
 								После отправления данных, мы вышлем на Ваш E-Mail файл с ценами.
 							</p>
 
-							<div class="row" style="display: flex; flex-wrap: wrap">
-								<div class="col-12 col-md-6 col-xl-3 input">
+							<div class="row">
+								<div class="col-12 col-md-6 col-xl-3">
 									<div class="form-group">
 										<p>Ваше Имя</p>
 										<input
@@ -333,7 +333,7 @@
 									</div>
 								</div>
 
-								<div class="col-12 col-md-6 col-xl-3 input">
+								<div class="col-12 col-md-6 col-xl-3">
 									<div class="form-group">
 										<p>Ваша Фамилия</p>
 										<input
@@ -349,7 +349,7 @@
 									</div>
 								</div>
 
-								<div class="col-12 col-md-6 col-xl-3 input">
+								<div class="col-12 col-md-6 col-xl-3">
 									<div class="form-group">
 										<p>Ваш Телефон</p>
 										<input
@@ -365,7 +365,7 @@
 									</div>
 								</div>
 
-								<div class="col-12 col-md-6 col-xl-3 input">
+								<div class="col-12 col-md-6 col-xl-3">
 									<div class="form-group">
 										<p>E-Mail</p>
 										<input
@@ -387,6 +387,7 @@
 									<div class="form-group">
 										<p>Сообщение</p>
 										<textarea
+											id="textarea"
 											class="form-control"
 											rows="4"
 											placeholder="Сообщение"
@@ -399,7 +400,7 @@
 
 									<p id="info" style="color: red"></p>
 
-									<div>
+									<span class="checkbox-item">
 										<label>
 											<input type="checkbox" id="checkbox" required />
 											<span>
@@ -407,7 +408,7 @@
 												на обработку персональных данных.
 											</span>
 										</label>
-									</div>
+									</span>
 								</div>
 							</div>
 
@@ -415,7 +416,7 @@
 								<input
 									type="submit"
 									value="Обратный звонок"
-									class="btn btn-warning"
+									class="btn send-call-submit"
 								/>
 							</div>
 						</form>
@@ -438,34 +439,60 @@
 				</div>
 				<div class="row">
 					<div class="col-12 col-md-5 col-lg-4 col-xl-3 contact-block">
-						<div class="bg-block" style="border: solid 1px">
+						<div class="adress">
 							<div class="item-cont">
-								<div class="icon-cont"></div>
-								<div class="name-cont">Адрес</div>
-								<div class="text-cont">
+								<div class="circle">
+									<div
+										class="icon"
+										style="background-image: url(images/location2.svg)"
+									></div>
+								</div>
+								<div class="name">Адрес</div>
+								<div class="text">
 									г. Москва, улица *** <br />
 									переулок ***,<br />
 									дом ***
 								</div>
 							</div>
 							<div class="item-cont">
-								<div class="icon-cont"></div>
-								<div class="name-cont">Телефон</div>
-								<div class="text-cont">
+								<div class="circle">
+									<div
+										class="icon"
+										style="background-image: url(images/call.svg)"
+									>
+										icon
+									</div>
+								</div>
+								<div class="name">Телефон</div>
+								<div class="text">
 									<a href="tel:+74952605289">+7 (999) 111-22-33</a>
 								</div>
 							</div>
 							<div class="item-cont">
-								<div class="icon-cont"></div>
-								<div class="name-cont">E-MAIL</div>
-								<div class="text-cont">
+								<div class="circle">
+									<div
+										class="icon"
+										style="background-image: url(images/email.svg)"
+									>
+										icon
+									</div>
+								</div>
+								<div class="name">E-MAIL</div>
+								<div class="text">
 									<a href="mailto:hotline@eduprof.ru">zxc@zxc.ru</a>
 								</div>
 							</div>
 							<div class="item-cont">
-								<div class="icon-cont"></div>
-								<div class="name-cont">Время работы</div>
-								<div class="text-cont">
+								<div class="circle">
+									<div
+										class="icon"
+										style="background-image: url(images/clock.svg)"
+									>
+										icon
+									</div>
+								</div>
+								<div class="name">Время работы</div>
+								<div class="text">
 									Пн - Пт: с 09.00 до 18.00 <br />
 									Без перерывов
 								</div>
@@ -473,12 +500,14 @@
 						</div>
 					</div>
 					<div class="col-12 col-md-7 col-lg-8 col-xl-9 map-block">
-						<iframe
-							src="https://yandex.ru/map-widget/v1/?um=constructor%3A491281b3df14e89b16d984c139f7c8ccb566d14a04b86594eff103652ae4bc42&amp;source=constructor"
-							width="100%"
-							height="100%"
-							frameborder="0"
-						></iframe>
+						<div class="map">
+							<iframe
+								src="https://yandex.ru/map-widget/v1/?um=constructor%3A491281b3df14e89b16d984c139f7c8ccb566d14a04b86594eff103652ae4bc42&amp;source=constructor"
+								width="100%"
+								height="100%"
+								frameborder="0"
+							></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -486,32 +515,20 @@
 		<!-- MAIN END -->
 
 		<!-- FOOTER START -->
-		<footer></footer>
+		<footer id="site-footer" class="container-fluid">
+			<div class="row">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 copyright" style="text-align: center">
+							&copy; 2023 «MY WORK»
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
 		<!-- FOOTER END -->
 
-		<!-- <script>
-			async function sendForm(form) {
-				let response = await fetch("./php/form_send.php", {
-					method: "POST",
-					body: new FormData(form),
-				});
-				let result = await response.text();
-				if (result == "Ok!") {
-					alert("Отправка данных успешна!");
-				} else if (result == "Exist!!!") {
-					info.innerText = "Пользователь уже существует!";
-				}
-			}
-			const formsend = document.getElementById("form-send");
-			formsend.addEventListener("submit", (e) => {
-				// действия с данными
-				e.preventDefault();
-				e.target.reset(); // очищаем форму
-			});
-		</script> -->
-
 		<script src="js/main.js"></script>
-
 		<script
 			src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
 			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
