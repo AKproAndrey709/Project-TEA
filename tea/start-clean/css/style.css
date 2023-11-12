@@ -153,6 +153,19 @@ li,
 .block-info-product,
 #info-company,
 .bg-block,
-.product {
+.product,
+.top_title,
+.top_text,
+.blockquote {
 	background-color: rgb(0, 0, 0, 0.5);
+}
+
+.text-info {
+	border-bottom: solid;
+}
+
+.text-cont,
+.text-cont a {
+	color: red;
+	font-size: 30px;
 }
