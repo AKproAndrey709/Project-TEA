@@ -352,10 +352,10 @@ a {
 	display: none;
 	background-color: rgb(0, 0, 0, 0.6);
 	cursor: pointer;
-	overflow: auto;
+	/* overflow: auto; */
 	z-index: 111;
 	content: '';
-	/* margin: 0; */
+	margin: 0;
 }
 
 .popup-table {
