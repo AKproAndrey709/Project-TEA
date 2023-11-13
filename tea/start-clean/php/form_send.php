@@ -6,7 +6,6 @@ $mysqli = mysqli_connect("localhost", "kovllkkv_0358", "1379", "kovllkkv_0358");
 if ($mysqli == false) {
 	print("Error... MySQL " . mysqli_connect_error());
 } else {
-	// print("Соединение установлено успешно. ");
 
 	$name = trim($_POST["name"]);
 	$lastname = trim($_POST["lastname"]);

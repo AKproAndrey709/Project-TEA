@@ -26,11 +26,9 @@
 					<nav class="col-12 navbar navbar-expand-lg navbar-light p-0 m-0">
 						<div class="col-lg-1 logo">
 							<a class="navbar-brand logo" href="index.html">
-								<img src="images/logo.svg" alt="TealuxE" />
+								<img src="images/logo.svg" alt="Tealuxe" />
 							</a>
 						</div>
-
-						<!-- <a class="navbar-brand" href="#">Navbar</a> -->
 						<button
 							class="navbar-toggler"
 							type="button"
@@ -42,12 +40,11 @@
 						>
 							<span class="navbar-toggler-icon"></span>
 						</button>
-
 						<div
-							class="collapse navbar-collapse col-lg-11 p-0 menu"
+							class="collapse navbar-collapse col-lg-11 p-0"
 							id="navbarNavDropdown"
 						>
-							<ul class="navbar-nav">
+							<ul class="navbar-nav menu">
 								<li class="nav-item menu__item">
 									<a class="nav-link" href="#product">Продукция</a>
 								</li>
@@ -78,7 +75,7 @@
 			<div class="top">
 				<div class="container">
 					<div class="top_inner">
-						<h1 class="top_title">"тук тук тук тук тук"</h1>
+						<h1 class="top_title">"Главное"</h1>
 						<p class="top_text">
 							"Ещё какой-то текст <br />
 							... тут продолжение"
@@ -238,59 +235,64 @@
 								<button class="popup-open">Заказать обратный звонок</button>
 							</div>
 						</div>
-						<div class="popup-overlay"></div>
-						<div class="popup-modal">
-							<!-- <button class="popup-close">&times;</button> -->
-							<form>
-								<div class="col-12 input">
-									<div class="form-group">
-										<p>Ваше Имя</p>
-										<input
-											type="text"
-											class="form-control"
-											placeholder="Ваше Имя"
-											onfocus="this.placeholder=''"
-											onblur="this.placeholder='Ваше Имя'"
-											size="40"
-											minlength="3"
-											autocomplete="name"
-											name="name"
-										/>
-									</div>
-								</div>
-								<div class="col-12 input">
-									<div class="form-group">
-										<p>Ваш Телефон</p>
-										<input
-											type="tel"
-											class="form-control"
-											placeholder="Ваш Телефон"
-											onfocus="this.placeholder=''"
-											onblur="this.placeholder='Ваш Телефон'"
-											autocomplete="tel"
-											name="phone"
-										/>
-									</div>
-								</div>
-								<div>
-									<label>
-										<input type="checkbox" id="checkbox-call" />
-										<span>
-											Нажимая на кнопку "Заказать", вы даете согласие на
-											обработку персональных данных.
-										</span>
-									</label>
-									<div>
-										<!-- <input
+						<div class="popup-overlay">
+							<div class="popup-table">
+								<div class="popup-center">
+									<div class="popup-modal">
+										<!-- <button class="popup-close">&times;</button> -->
+										<form class="zakaz">
+											<div class="col-12 input">
+												<div class="form-group">
+													<p>Ваше Имя</p>
+													<input
+														type="text"
+														class="form-control"
+														placeholder="Ваше Имя"
+														onfocus="this.placeholder=''"
+														onblur="this.placeholder='Ваше Имя'"
+														size="40"
+														minlength="3"
+														autocomplete="name"
+														name="name"
+													/>
+												</div>
+											</div>
+											<div class="col-12 input">
+												<div class="form-group">
+													<p>Ваш Телефон</p>
+													<input
+														type="tel"
+														class="form-control"
+														placeholder="Ваш Телефон"
+														onfocus="this.placeholder=''"
+														onblur="this.placeholder='Ваш Телефон'"
+														autocomplete="tel"
+														name="phone"
+													/>
+												</div>
+											</div>
+											<div>
+												<label>
+													<input type="checkbox" id="checkbox-call" />
+													<span>
+														Нажимая на кнопку "Заказать", вы даете согласие на
+														обработку персональных данных.
+													</span>
+												</label>
+												<div>
+													<!-- <input
 											type="submit"
 											value="Заказать"
 											class="btn btn-warning popup-close"
 										/> -->
-										<button class="popup-close">Заказать</button>
+													<button class="popup-close">Заказать</button>
+												</div>
+											</div>
+										</form>
 									</div>
 								</div>
-							</form>
-						</div>
+							</div>
+						
 					</div>
 				</div>
 			</div>
@@ -315,7 +317,6 @@
 							<p class="text-form">
 								После отправления данных, мы вышлем на Ваш E-Mail файл с ценами.
 							</p>
-
 							<div class="row">
 								<div class="col-12 col-md-6 col-xl-3">
 									<div class="form-group">

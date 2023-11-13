@@ -12,7 +12,6 @@ async function sendForm(form) {
 }
 const formsend = document.getElementById("form-send");
 formsend.addEventListener("submit", (e) => {
-	// действия с данными
 	e.preventDefault();
 	e.target.reset(); // очищаем форму
 });
