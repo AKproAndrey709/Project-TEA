@@ -16,3 +16,12 @@ $(document).ready(function ($) {
 		}
 	});
 });
+
+$(document).ready(function () {
+	$('[data-toggle="popover"]').popover({
+		placement: 'top'
+	});
+	$('.popover-dismiss').popover({
+		trigger: 'focus'
+	})
+});

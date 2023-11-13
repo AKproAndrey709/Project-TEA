@@ -15,3 +15,4 @@ formsend.addEventListener("submit", (e) => {
 	e.preventDefault();
 	e.target.reset(); // очищаем форму
 });
+
